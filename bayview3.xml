@@ -1,1 +1,79 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="variables_set" id="28" inline="true" x="2" y="14">
+    <field name="VAR">i</field>
+    <value name="VALUE">
+      <block type="math_number" id="57">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="controls_whileUntil" id="133" inline="false">
+        <field name="MODE">WHILE</field>
+        <value name="NUMBER">
+          <block type="logic_compare" id="147" inline="true">
+            <field name="OP">LT</field>
+            <value name="A">
+              <block type="variables_get" id="175">
+                <field name="VAR">i</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="182">
+                <field name="NUM">4</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO">
+          <block type="movement_forward" id="198">
+            <next>
+              <block type="robot_delay" id="249" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="273">
+                    <field name="NUM">1000</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="movement_right" id="311">
+                    <next>
+                      <block type="robot_delay" id="313" inline="true">
+                        <value name="DELAY">
+                          <block type="math_number" id="323">
+                            <field name="NUM">1000</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="356" inline="true">
+                            <field name="VAR">i</field>
+                            <value name="VALUE">
+                              <block type="math_arithmetic" id="425" inline="true">
+                                <field name="OP">ADD</field>
+                                <value name="A">
+                                  <block type="variables_get" id="429">
+                                    <field name="VAR">i</field>
+                                  </block>
+                                </value>
+                                <value name="B">
+                                  <block type="math_number" id="436">
+                                    <field name="NUM">1</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <next>
+          <block type="movement_stop" id="452"></block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
